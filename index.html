@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Master BCA Management Skills - Comprehensive guide to Business Communication, Project Management, Leadership, Strategic Planning, and Organizational Behavior for BCA students.">
+  <meta name="theme-color" content="#061b31">
+  <meta property="og:title" content="BCA Management Skills - Master Business & Tech Leadership">
+  <meta property="og:description" content="Complete guide to BCA Management Skills: Business Communication, Project Management, Leadership, Strategic Planning, Organizational Behavior">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BCA Management Skills - Master Business & Tech Leadership">
+  <meta name="twitter:description" content="Complete guide to BCA Management Skills for tech professionals">
+  <title>BCA Management Skills - Master Business & Tech Leadership</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
+    }
+  }
+  </script>
+  
+  <style>
+    :root {
+      --color-bg: #ffffff;
+      --color-bg-alt: #f8fafc;
+      --color-bg-dark: #061b31;
+      --color-bg-darker: #03101f;
+      --color-fg: #061b31;
+      --color-fg-muted: #64748d;
+      --color-fg-subtle: #94a3b8;
+      --color-accent: #533afd;
+      --color-accent-hover: #4434d4;
+      --color-accent-light: #eef0ff;
+      --color-accent-glow: rgba(83, 58, 253, 0.35);
+      --color-border: #e5edf5;
+      --color-border-strong: #b9b9f9;
+      --color-success: #15be53;
+      --color-success-bg: rgba(21, 190, 83, 0.12);
+      --color-warning: #f59e0b;
+      --color-error: #ef4444;
+      --shadow-ambient: rgba(23, 23, 23, 0.06) 0px 3px 6px;
+      --shadow-standard: rgba(23, 23, 23, 0.08) 0px 15px 35px;
+      --shadow-elevated: rgba(50, 50, 93, 0.25) 0px 30px 45px -30px, rgba(0, 0, 0, 0.1) 0px 18px 36px -18px;
+      --shadow-deep: rgba(3, 3, 39, 0.25) 0px 14px 21px -14px, rgba(0, 0, 0, 0.1) 0px 8px 17px -8px;
+      --shadow-glow: 0 0 0 1px var(--color-border-strong), 0 20px 40px -20px var(--color-accent-glow);
+      --radius-sm: 4px; --radius-md: 6px; --radius-lg: 8px; --radius-xl: 12px; --radius-pill: 9999px;
+      --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px; --space-10: 128px;
+      --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --font-size-hero: clamp(40px, 6vw, 64px);
+      --font-size-h1: clamp(32px, 4.5vw, 48px);
+      --font-size-h2: clamp(24px, 3.5vw, 36px);
+      --font-size-h3: clamp(20px, 2.5vw, 28px);
+      --font-size-body-lg: 20px; --font-size-body: 17px; --font-size-body-sm: 15px; --font-size-caption: 13px; --font-size-micro: 11px;
+      --font-weight-light: 300; --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600;
+      --line-height-tight: 1.05; --line-height-snug: 1.15; --line-height-normal: 1.5; --line-height-relaxed: 1.7;
+      --tracking-tight: -0.025em; --tracking-tighter: -0.035em; --tracking-normal: 0;
+      --duration-fast: 150ms; --duration-normal: 250ms; --duration-slow: 400ms; --duration-slower: 600ms;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+      --z-bg: 0; --z-content: 10; --z-sticky: 50; --z-overlay: 100; --z-modal: 200; --z-toast: 300;
+      --container-max: 1120px; --container-padding: 24px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } }
+    body { font-family: var(--font-sans); font-size: var(--font-size-body); font-weight: var(--font-weight-regular); line-height: var(--line-height-normal); color: var(--color-fg); background: var(--color-bg); letter-spacing: var(--tracking-normal); overflow-x: hidden; }
+    h1, h2, h3, h4, h5, h6 { font-weight: var(--font-weight-light); line-height: var(--line-height-tight); letter-spacing: var(--tracking-tighter); color: var(--color-fg); font-feature-settings: "cv01" on, "ss03" on; }
+    h1 { font-size: var(--font-size-hero); letter-spacing: -0.035em; }
+    h2 { font-size: var(--font-size-h1); letter-spacing: -0.03em; }
+    h3 { font-size: var(--font-size-h2); letter-spacing: -0.025em; }
+    h4 { font-size: var(--font-size-h3); letter-spacing: -0.02em; font-weight: var(--font-weight-regular); }
+    p { color: var(--color-fg-muted); line-height: var(--line-height-relaxed); font-weight: var(--font-weight-regular); }
+    a { color: var(--color-accent); text-decoration: none; transition: color var(--duration-fast) var(--ease-out); }
+    a:hover { color: var(--color-accent-hover); }
+    a:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: var(--radius-sm); }
+    .font-mono { font-family: var(--font-mono); font-feature-settings: "liga" on; }
+    .container { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-padding); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); font-family: var(--font-sans); font-size: var(--font-size-body-sm); font-weight: var(--font-weight-medium); line-height: 1; padding: var(--space-3) var(--space-5); border-radius: var(--radius-md); border: none; cursor: pointer; transition: all var(--duration-fast) var(--ease-out); text-decoration: none; white-space: nowrap; }
+    .btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-primary { background: var(--color-accent); color: #fff; box-shadow: var(--shadow-ambient); }
+    .btn-primary:hover:not(:disabled) { background: var(--color-accent-hover); box-shadow: var(--shadow-elevated); transform: translateY(-1px); }
+    .btn-primary:active:not(:disabled) { transform: translateY(0); box-shadow: var(--shadow-ambient); }
+    .btn-secondary { background: transparent; color: var(--color-accent); border: 1px solid var(--color-border-strong); }
+    .btn-secondary:hover:not(:disabled) { background: var(--color-accent-light); border-color: var(--color-accent); }
+    .btn-ghost { background: transparent; color: var(--color-fg); border: 1px solid var(--color-border); }
+    .btn-ghost:hover:not(:disabled) { background: var(--color-bg-alt); border-color: var(--color-border-strong); }
+    .btn-large { padding: var(--space-4) var(--space-7); font-size: var(--font-size-body); }
+    .btn-icon { padding: var(--space-2); border-radius: var(--radius-md); }
+    .card { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); transition: all var(--duration-normal) var(--ease-out); box-shadow: var(--shadow-ambient); }
+    .card:hover { border-color: var(--color-border-strong); box-shadow: var(--shadow-elevated); transform: translateY(-2px); }
+    .card-elevated { box-shadow: var(--shadow-standard); }
+    .card-elevated:hover { box-shadow: var(--shadow-deep); }
+    .badge { display: inline-flex; align-items: center; font-size: var(--font-size-micro); font-weight: var(--font-weight-medium); padding: var(--space-1) var(--space-3); border-radius: var(--radius-pill); line-height: 1; }
+    .badge-primary { background: var(--color-accent-light); color: var(--color-accent); border: 1px solid var(--color-border-strong); }
+    .badge-success { background: var(--color-success-bg); color: var(--color-success); }
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-sticky); background: rgba(255, 255, 255, 0.85); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--color-border); transition: all var(--duration-normal) var(--ease-out); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: var(--space-2); font-size: var(--font-size-body-lg); font-weight: var(--font-weight-semibold); color: var(--color-fg); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-logo:hover { color: var(--color-accent); }
+    .nav-logo-icon { width: 32px; height: 32px; background: linear-gradient(135deg, var(--color-accent), #7c5cff); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 14px; }
+    .nav-links { display: flex; align-items: center; gap: var(--space-6); list-style: none; }
+    .nav-links a { font-size: var(--font-size-body-sm); font-weight: var(--font-weight-medium); color: var(--color-fg-muted); transition: color var(--duration-fast) var(--ease-out); }
+    .nav-links a:hover { color: var(--color-fg); }
+    .nav-links .btn { height: 40px; }
+    .nav-toggle { display: none; }
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: calc(64px + var(--space-10)) 0 var(--space-10); overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; z-index: var(--z-bg); background: radial-gradient(ellipse 80% 50% at 50% -20%, var(--color-accent-light) 0%, transparent 70%), radial-gradient(ellipse 60% 40% at 100% 100%, rgba(124, 92, 255, 0.15) 0%, transparent 60%), var(--color-bg); }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: center; position: relative; z-index: var(--z-content); width: 100%; }
+    .hero-content { padding-right: var(--space-8); }
+    .hero-badge { display: inline-flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-6); padding: var(--space-2) var(--space-4); background: var(--color-accent-light); border: 1px solid var(--color-border-strong); border-radius: var(--radius-pill); font-size: var(--font-size-caption); font-weight: var(--font-weight-medium); color: var(--color-accent); animation: fadeInUp var(--duration-slower) var(--ease-out) both; }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--color-accent); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
+    .hero h1 { margin-bottom: var(--space-5); animation: fadeInUp var(--duration-slower) var(--ease-out) 0.1s both; }
+    .hero p.hero-subtitle { font-size: var(--font-size-body-lg); font-weight: var(--font-weight-regular); color: var(--color-fg-muted); max-width: 520px; margin-bottom: var(--space-8); animation: fadeInUp var(--duration-slower) var(--ease-out) 0.2s both; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-4); animation: fadeInUp var(--duration-slower) var(--ease-out) 0.3s both; }
+    .hero-trust { display: flex; align-items: center; gap: var(--space-6); margin-top: var(--space-10); padding-top: var(--space-6); border-top: 1px solid var(--color-border); animation: fadeInUp var(--duration-slower) var(--ease-out) 0.4s both; }
+    .hero-trust-label { font-size: var(--font-size-caption); font-weight: var(--font-weight-medium); color: var(--color-fg-subtle); text-transform: uppercase; letter-spacing: 0.05em; }
+    .hero-trust-logos { display: flex; gap: var(--space-6); opacity: 0.5; transition: opacity var(--duration-normal) var(--ease-out); }
+    .hero-trust-logos:hover { opacity: 1; }
+    .hero-trust-logos svg { height: 20px; color: var(--color-fg-subtle); }
+    .hero-visual { position: relative; display: flex; justify-content: center; align-items: center; animation: fadeIn var(--duration-slower) var(--ease-out) 0.2s both; }
+    #hero-canvas { width: 100%; max-width: 560px; aspect-ratio: 1; border-radius: var(--radius-xl); box-shadow: var(--shadow-elevated); }
+    .hero-visual-glow { position: absolute; inset: -40px; background: radial-gradient(ellipse at center, var(--color-accent-glow) 0%, transparent 70%); border-radius: 50%; filter: blur(60px); opacity: 0.5; animation: breathe 4s ease-in-out infinite; pointer-events: none; }
+    .section { padding: var(--space-10) 0; position: relative; }
+    .section-header { text-align: center; max-width: 720px; margin: 0 auto var(--space-10); }
+    .section-badge { display: inline-block; margin-bottom: var(--space-4); animation: fadeInUp var(--duration-slow) var(--ease-out) both; }
+    .section-header h2 { margin-bottom: var(--space-4); animation: fadeInUp var(--duration-slow) var(--ease-out) 0.1s both; }
+    .section-header p { font-size: var(--font-size-body-lg); animation: fadeInUp var(--duration-slow) var(--ease-out) 0.2s both; }
+    .skills { background: var(--color-bg-alt); }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+    .skill-card { position: relative; padding: var(--space-7) var(--space-6); background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-xl); transition: all var(--duration-normal) var(--ease-out); animation: fadeInUp var(--duration-slow) var(--ease-out) both; }
+    .skill-card:hover { border-color: var(--color-border-strong); box-shadow: var(--shadow-elevated); transform: translateY(-4px); }
+    .skill-icon { width: 48px; height: 48px; background: var(--color-accent-light); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-4); color: var(--color-accent); transition: all var(--duration-normal) var(--ease-out); }
+    .skill-card:hover .skill-icon { background: var(--color-accent); color: white; transform: scale(1.05) rotate(2deg); }
+    .skill-card h3 { font-size: var(--font-size-h3); margin-bottom: var(--space-3); font-weight: var(--font-weight-regular); }
+    .skill-card p { font-size: var(--font-size-body); color: var(--color-fg-muted); line-height: var(--line-height-relaxed); }
+    .skill-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--color-accent), #7c5cff); border-radius: var(--radius-xl) var(--radius-xl) 0 0; opacity: 0; transform: scaleX(0); transform-origin: left; transition: all var(--duration-normal) var(--ease-out); }
+    .skill-card:hover::before { opacity: 1; transform: scaleX(1); }
+    .skill-topics { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-5); }
+    .skill-topic { font-size: var(--font-size-caption); padding: var(--space-1) var(--space-3); background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-pill); color: var(--color-fg-muted); font-weight: var(--font-weight-medium); }
+    .curriculum { background: var(--color-bg); }
+    .curriculum-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+    .curriculum-item { position: relative; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--color-border); background: var(--color-bg-alt); transition: all var(--duration-normal) var(--ease-out); animation: fadeInUp var(--duration-slow) var(--ease-out) both; }
+    .curriculum-item:hover { border-color: var(--color-border-strong); box-shadow: var(--shadow-elevated); transform: translateY(-2px); }
+    .curriculum-item.large { grid-column: span 2; aspect-ratio: 16/9; }
+    .curriculum-image { width: 100%; height: 100%; object-fit: cover; transition: transform var(--duration-slower) var(--ease-out); }
+    .curriculum-item:hover .curriculum-image { transform: scale(1.02); }
+    .curriculum-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(6, 27, 49, 0.9) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: var(--space-6); color: white; }
+    .curriculum-overlay h3 { font-size: var(--font-size-h3); margin-bottom: var(--space-2); }
+    .curriculum-overlay p { color: rgba(255,255,255,0.7); font-size: var(--font-size-body); }
+    .career-paths { background: var(--color-bg-alt); }
+    .career-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+    .career-card { padding: var(--space-7) var(--space-6); animation: fadeInUp var(--duration-slow) var(--ease-out) both; }
+    .career-stats { display: flex; gap: var(--space-1); margin-bottom: var(--space-4); color: #fbbf24; }
+    .career-text { font-size: var(--font-size-body); line-height: var(--line-height-relaxed); color: var(--color-fg); margin-bottom: var(--space-6); font-weight: var(--font-weight-regular); }
+    .career-author { display: flex; align-items: center; gap: var(--space-3); }
+    .career-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--color-accent), #7c5cff); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: var(--font-size-body-sm); }
+    .career-info h4 { font-size: var(--font-size-body-sm); font-weight: var(--font-weight-semibold); color: var(--color-fg); }
+    .career-info p { font-size: var(--font-size-caption); color: var(--color-fg-subtle); margin: 0; }
+    .resources { background: var(--color-bg); }
+    .resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+    .resource-card { padding: var(--space-7) var(--space-6); animation: fadeInUp var(--duration-slow) var(--ease-out) both; }
+    .resource-stars { display: flex; gap: var(--space-1); margin-bottom: var(--space-4); color: #fbbf24; }
+    .resource-text { font-size: var(--font-size-body); line-height: var(--line-height-relaxed); color: var(--color-fg); margin-bottom: var(--space-6); font-weight: var(--font-weight-regular); }
+    .resource-author { display: flex; align-items: center; gap: var(--space-3); }
+    .resource-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--color-accent), #7c5cff); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-size: var(--font-size-body-sm); }
+    .resource-info h4 { font-size: var(--font-size-body-sm); font-weight: var(--font-weight-semibold); color: var(--color-fg); }
+    .resource-info p { font-size: var(--font-size-caption); color: var(--color-fg-subtle); margin: 0; }
+    .cta { background: var(--color-bg-dark); color: white; position: relative; overflow: hidden; }
+    .cta::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(ellipse at 30% 30%, rgba(83, 58, 253, 0.2) 0%, transparent 50%), radial-gradient(ellipse at 70% 70%, rgba(124, 92, 255, 0.15) 0%, transparent 50%); pointer-events: none; }
+    .cta-inner { position: relative; z-index: var(--z-content); text-align: center; max-width: 720px; margin: 0 auto; padding: var(--space-10) var(--space-6); }
+    .cta h2 { color: white; margin-bottom: var(--space-4); font-weight: var(--font-weight-light); }
+    .cta p { color: rgba(255,255,255,0.7); font-size: var(--font-size-body-lg); margin-bottom: var(--space-8); }
+    .cta-actions { display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; }
+    .cta .btn-primary { background: var(--color-accent); box-shadow: var(--shadow-glow); }
+    .cta .btn-primary:hover { background: var(--color-accent-hover); }
+    .cta .btn-secondary { border-color: rgba(255,255,255,0.3); color: white; }
+    .cta .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: white; }
+    .footer { background: var(--color-bg); border-top: 1px solid var(--color-border); padding: var(--space-10) 0 var(--space-6); }
+    .footer-grid { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: var(--space-8); margin-bottom: var(--space-10); }
+    .footer-brand p { color: var(--color-fg-muted); font-size: var(--font-size-body-sm); margin-top: var(--space-4); max-width: 280px; }
+    .footer-column h4 { font-size: var(--font-size-caption); font-weight: var(--font-weight-semibold); text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-fg-subtle); margin-bottom: var(--space-4); }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+    .footer-links a { font-size: var(--font-size-body-sm); color: var(--color-fg-muted); transition: color var(--duration-fast) var(--ease-out); }
+    .footer-links a:hover { color: var(--color-accent); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: var(--space-6); border-top: 1px solid var(--color-border); font-size: var(--font-size-caption); color: var(--color-fg-subtle); }
+    .footer-social { display: flex; gap: var(--space-4); }
+    .footer-social a { width: 36px; height: 36px; border-radius: var(--radius-md); background: var(--color-bg-alt); border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; color: var(--color-fg-muted); transition: all var(--duration-fast) var(--ease-out); }
+    .footer-social a:hover { background: var(--color-accent-light); border-color: var(--color-border-strong); color: var(--color-accent); }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.9); } }
+    @keyframes breathe { 0%, 100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.05); } }
+    @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 33% { transform: translateY(-8px) rotate(1deg); } 66% { transform: translateY(4px) rotate(-1deg); } }
+    @keyframes rotate-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity var(--duration-slower) var(--ease-out), transform var(--duration-slower) var(--ease-out); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 100ms; } .reveal-delay-2 { transition-delay: 200ms; } .reveal-delay-3 { transition-delay: 300ms; } .reveal-delay-4 { transition-delay: 400ms; }
+    @media (max-width: 1024px) { .hero-grid { grid-template-columns: 1fr; gap: var(--space-8); text-align: center; } .hero-content { padding-right: 0; } .hero-subtitle { margin-left: auto; margin-right: auto; } .hero-actions { justify-content: center; } .hero-trust { justify-content: center; } .skills-grid { grid-template-columns: repeat(2, 1fr); } .curriculum-grid { grid-template-columns: 1fr; } .curriculum-item.large { grid-column: span 1; aspect-ratio: 4/3; } .career-grid { grid-template-columns: repeat(2, 1fr); } .resources-grid { grid-template-columns: repeat(2, 1fr); } .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { :root { --container-padding: 20px; --space-10: 80px; } .nav-links { position: fixed; top: 64px; left: 0; right: 0; background: var(--color-bg); border-bottom: 1px solid var(--color-border); flex-direction: column; padding: var(--space-6); gap: var(--space-4); display: none; box-shadow: var(--shadow-standard); } .nav-links.open { display: flex; } .nav-toggle { display: flex; } .hero { min-height: auto; padding: calc(64px + var(--space-8)) 0 var(--space-8); } .hero h1 { font-size: clamp(32px, 8vw, 48px); } .hero-visual { display: none; } .skills-grid { grid-template-columns: 1fr; } .career-grid { grid-template-columns: 1fr; } .resources-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; gap: var(--space-6); } .footer-brand { grid-column: span 2; } .footer-bottom { flex-direction: column; gap: var(--space-4); text-align: center; } .cta-actions { flex-direction: column; align-items: center; } .cta-actions .btn { width: 100%; max-width: 280px; } }
+    @media (max-width: 480px) { :root { --container-padding: 16px; } .btn-large { padding: var(--space-3) var(--space-5); font-size: var(--font-size-body-sm); } .card { padding: var(--space-5); } .skill-card { padding: var(--space-6) var(--space-5); } }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    .text-center { text-align: center; } .text-accent { color: var(--color-accent); } .text-muted { color: var(--color-fg-muted); }
+    :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+    ::selection { background: var(--color-accent-light); color: var(--color-accent); }
+    ::-webkit-scrollbar { width: 8px; height: 8px; } ::-webkit-scrollbar-track { background: var(--color-bg-alt); } ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 4px; } ::-webkit-scrollbar-thumb:hover { background: var(--color-border-strong); }
+  </style>
+</head>
+<body class="light-mode">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo" aria-label="BCA Management Skills Home"><span class="nav-logo-icon" aria-hidden="true">BCA</span><span>BCA Management Skills</span></a>
+      <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="#skills" role="menuitem">Core Skills</a></li>
+        <li role="none"><a href="#curriculum" role="menuitem">Curriculum</a></li>
+        <li role="none"><a href="#career-paths" role="menuitem">Career Paths</a></li>
+        <li role="none"><a href="#resources" role="menuitem">Resources</a></li>
+        <li role="none"><a href="#contact" class="btn btn-primary" role="menuitem">Get Started</a></li>
+      </ul>
+      <button class="nav-toggle btn btn-ghost btn-icon" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+    </div>
+  </nav>
+  
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-visual" aria-hidden="true"><div class="hero-visual-glow"></div><canvas id="hero-canvas"></canvas></div>
+    <div class="container"><div class="hero-grid"><div class="hero-content">
+      <div class="hero-badge" aria-label="New curriculum"><span aria-hidden="true"></span><span>Updated 2025 Curriculum — Industry Aligned</span></div>
+      <h1 id="hero-title" class="reveal">Master <span style="color: var(--color-accent);">BCA Management Skills</span></h1>
+      <p class="hero-subtitle reveal reveal-delay-1">Bridge the gap between code and commerce. Master Business Communication, Project Management, Leadership, Strategic Planning, and Organizational Behavior — the essential skills every BCA graduate needs to lead in tech.</p>
+      <div class="hero-actions reveal reveal-delay-2">
+        <a href="#skills" class="btn btn-primary btn-large">Explore Core Skills</a>
+        <a href="#curriculum" class="btn btn-secondary btn-large">View Curriculum</a>
+      </div>
+      <div class="hero-trust reveal reveal-delay-3">
+        <span class="hero-trust-label">Trusted by students from</span>
+        <div class="hero-trust-logos" aria-label="University logos">
+          <svg viewBox="0 0 120 30" aria-hidden="true"><text x="0" y="20" font-family="system-ui" font-weight="600" font-size="14" fill="currentColor">MIT</text></svg>
+          <svg viewBox="0 0 120 30" aria-hidden="true"><text x="0" y="20" font-family="system-ui" font-weight="600" font-size="14" fill="currentColor">Stanford</text></svg>
+          <svg viewBox="0 0 120 30" aria-hidden="true"><text x="0" y="20" font-family="system-ui" font-weight="600" font-size="14" fill="currentColor">IIT</text></svg>
+          <svg viewBox="0 0 120 30" aria-hidden="true"><text x="0" y="20" font-family="system-ui" font-weight="600" font-size="14" fill="currentColor">BITS</text></svg>
+        </div>
+      </div>
+    </div></div></div>
+  </section>
+  
+  <section id="skills" class="section skills" aria-labelledby="skills-title">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-badge badge badge-primary">Core Competencies</span>
+        <h2 id="skills-title" class="reveal reveal-delay-1">Five Pillars of BCA Management</h2>
+        <p class="reveal reveal-delay-2">Each skill combines theoretical frameworks with practical applications — preparing you for real-world tech leadership roles.</p>
+      </header>
+      <div class="skills-grid" role="list">
+        <article class="skill-card card reveal reveal-delay-1" role="listitem">
+          <div class="skill-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+          <h3>Business Communication</h3>
+          <p>Master professional writing, presentations, cross-cultural communication, and stakeholder management. Learn to translate technical concepts for non-technical audiences.</p>
+          <div class="skill-topics">
+            <span class="skill-topic">Professional Writing</span>
+            <span class="skill-topic">Presentation Skills</span>
+            <span class="skill-topic">Stakeholder Management</span>
+            <span class="skill-topic">Technical Translation</span>
+          </div>
+        </article>
+        <article class="skill-card card reveal reveal-delay-2" role="listitem">
+          <div class="skill-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+          <h3>Project Management</h3>
+          <p>Agile, Scrum, Kanban, Waterfall methodologies. Sprint planning, risk management, resource allocation, and delivery excellence using industry-standard tools like Jira, Trello, and Asana.</p>
+          <div class="skill-topics">
+            <span class="skill-topic">Agile & Scrum</span>
+            <span class="skill-topic">Risk Management</span>
+            <span class="skill-topic">Sprint Planning</span>
+            <span class="skill-topic">Jira & Trello</span>
+          </div>
+        </article>
+        <article class="skill-card card reveal reveal-delay-3" role="listitem">
+          <div class="skill-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+          <h3>Leadership & Team Dynamics</h3>
+          <p>Develop emotional intelligence, conflict resolution, delegation, motivation techniques, and inclusive leadership. Build high-performing teams in diverse tech environments.</p>
+          <div class="skill-topics">
+            <span class="skill-topic">Emotional Intelligence</span>
+            <span class="skill-topic">Conflict Resolution</span>
+            <span class="skill-topic">Delegation</span>
+            <span class="skill-topic">Team Building</span>
+          </div>
+        </article>
+        <article class="skill-card card reveal reveal-delay-4" role="listitem">
+          <div class="skill-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+          <h3>Strategic Planning</h3>
+          <p>SWOT analysis, OKRs, KPIs, roadmapping, competitive analysis, and data-driven decision making. Align technology initiatives with business objectives.</p>
+          <div class="skill-topics">
+            <span class="skill-topic">SWOT Analysis</span>
+            <span class="skill-topic">OKRs & KPIs</span>
+            <span class="skill-topic">Roadmapping</span>
+            <span class="skill-topic">Competitive Analysis</span>
+          </div>
+        </article>
+        <article class="skill-card card reveal reveal-delay-1" role="listitem">
+          <div class="skill-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+          <h3>Organizational Behavior</h3>
+          <p>Understand motivation theories, organizational culture, change management, power dynamics, and decision-making psychology in technology organizations.</p>
+          <div class="skill-topics">
+            <span class="skill-topic">Motivation Theories</span>
+            <span class="skill-topic">Change Management</span>
+            <span class="skill-topic">Org Culture</span>
+            <span class="skill-topic">Decision Psychology</span>
+          </div>
+        </article>
+        <article class="skill-card card reveal reveal-delay-2" role="listitem">
+          <div class="skill-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+          <h3>Integrated Capstone</h3>
+          <p>Synthesize all five pillars in a real-world consulting project. Work with industry partners to solve actual business-technology challenges end-to-end.</p>
+          <div class="skill-topics">
+            <span class="skill-topic">Industry Projects</span>
+            <span class="skill-topic">Client Engagement</span>
+            <span class="skill-topic">Portfolio Building</span>
+            <span class="skill-topic">Career Prep</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <section id="curriculum" class="section curriculum" aria-labelledby="curriculum-title">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-badge badge badge-primary">Course Structure</span>
+        <h2 id="curriculum-title" class="reveal reveal-delay-1">Semester-wise Curriculum</h2>
+        <p class="reveal reveal-delay-2">Progressive learning path from fundamentals to advanced applications — each semester builds on the previous.</p>
+      </header>
+      <div class="curriculum-grid" role="list">
+        <article class="curriculum-item reveal reveal-delay-1" role="listitem">
+          <div class="curriculum-overlay">
+            <h3>Semester 1: Foundations</h3>
+            <p>Business Communication Fundamentals • Management Principles • Organizational Behavior Basics • Professional Ethics</p>
+          </div>
+        </article>
+        <article class="curriculum-item reveal reveal-delay-2" role="listitem">
+          <div class="curriculum-overlay">
+            <h3>Semester 2: Core Skills</h3>
+            <p>Project Management (Agile/Waterfall) • Leadership Essentials • Strategic Thinking • Business Analytics Basics</p>
+          </div>
+        </article>
+        <article class="curriculum-item reveal reveal-delay-3" role="listitem">
+          <div class="curriculum-overlay">
+            <h3>Semester 3: Advanced Applications</h3>
+            <p>Advanced Project Management • Change Management • Negotiation & Conflict Resolution • Digital Transformation</p>
+          </div>
+        </article>
+        <article class="curriculum-item reveal reveal-delay-4" role="listitem">
+          <div class="curriculum-overlay">
+            <h3>Semester 4: Capstone & Career</h3>
+            <p>Integrated Capstone Project • Industry Internship • Portfolio Development • Interview Preparation & Placement</p>
+          </div>
+        </article>
+        <article class="curriculum-item large reveal reveal-delay-1" role="listitem">
+          <div class="curriculum-overlay">
+            <h3>Elective Specializations</h3>
+            <p>Choose from: Tech Product Management • IT Consulting • Entrepreneurship • Data-Driven Decision Making • Cybersecurity Management</p>
+          </div>
+        </article>
+        <article class="curriculum-item large reveal reveal-delay-2" role="listitem">
+          <div class="curriculum-overlay">
+            <h3>Certifications Included</h3>
+            <p>Scrum Master (PSM I) • Project Management (CAPM) • Business Analysis (ECBA) • Leadership Assessment (DISC) • Six Sigma Yellow Belt</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <section id="career-paths" class="section career-paths" aria-labelledby="career-title">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-badge badge badge-primary">Career Outcomes</span>
+        <h2 id="career-title" class="reveal reveal-delay-1">Where BCA Management Graduates Work</h2>
+        <p class="reveal reveal-delay-2">Our alumni hold leadership positions at top technology companies worldwide.</p>
+      </header>
+      <div class="career-grid" role="list">
+        <article class="career-card card card-elevated reveal reveal-delay-1" role="listitem">
+          <div class="career-stars" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg></div>
+          <p class="career-text">"The management skills I learned transformed my career from a pure developer to a Technical Product Manager at Google. The capstone project with a real client was the highlight."</p>
+          <div class="career-author">
+            <div class="career-avatar" aria-hidden="true">SK</div>
+            <div class="career-info">
+              <h4>Sarah Kim</h4>
+              <p>Technical Product Manager, Google • Class of 2023</p>
+            </div>
+          </div>
+        </article>
+        <article class="career-card card card-elevated reveal reveal-delay-2" role="listitem">
+          <div class="career-stars" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg></div>
+          <p class="career-text">"Agile and Scrum training got me certified as a Scrum Master before graduation. Now I lead a team of 12 engineers at Microsoft. The leadership modules were game-changing."</p>
+          <div class="career-author">
+            <div class="career-avatar" aria-hidden="true">RC</div>
+            <div class="career-info">
+              <h4>Rahul Chen</h4>
+              <p>Engineering Manager, Microsoft • Class of 2022</p>
+            </div>
+          </div>
+        </article>
+        <article class="career-card card card-elevated reveal reveal-delay-3" role="listitem">
+          <div class="career-stars" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg></div>
+          <p class="career-text">"Strategic Planning and Organizational Behavior gave me the framework to launch my own SaaS startup. We raised $2M seed funding and the capstone project became our MVP."</p>
+          <div class="career-author">
+            <div class="career-avatar" aria-hidden="true">AP</div>
+            <div class="career-info">
+              <h4>Ananya Patel</h4>
+              <p>Founder & CEO, TechStart Inc. • Class of 2024</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <section id="resources" class="section resources" aria-labelledby="resources-title">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-badge badge badge-primary">Learning Resources</span>
+        <h2 id="resources-title" class="reveal reveal-delay-1">Everything You Need to Succeed</h2>
+        <p class="reveal reveal-delay-2">Curated resources, tools, and communities to support your management journey.</p>
+      </header>
+      <div class="resources-grid" role="list">
+        <article class="resource-card card reveal reveal-delay-1" role="listitem">
+          <div class="resource-stars" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg></div>
+          <p class="resource-text">"The Business Communication module alone is worth the tuition. I use those frameworks daily in client meetings and technical presentations."</p>
+          <div class="resource-author">
+            <div class="resource-avatar" aria-hidden="true">MP</div>
+            <div class="resource-info">
+              <h4>Michael Park</h4>
+              <p>Solutions Architect, AWS</p>
+            </div>
+          </div>
+        </article>
+        <article class="resource-card card reveal reveal-delay-2" role="listitem">
+          <div class="resource-stars" aria-label="5 out of 5 stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></svg></div>
+          <p class="resource-text">"Organizational Behavior helped me navigate office politics and build influence without authority — critical for any tech lead role."</p>
+          <div class="resource-author">
+            <div class="resource-avatar" aria-hidden="true">LR</div>
+            <div class="resource-info">
+              <h4>Lisa Rodriguez</h4>
+              <p>Tech Lead, Stripe</p>
+            </div>
+          </div>
+        </article>
+        <article class="resource-card card reveal reveal-delay-3" role="listitem">
+          <div class="resource-stars" aria-label="5 out of
