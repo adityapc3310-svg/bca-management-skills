@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply — BCA Management Skills</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="supabase/config.js"></script>
+  <script type="module" src="supabase/supabase-client.js"></script>
+  <style>
+    :root {
+      --bg-base:#0a0f1a; --bg-card:#131a2a; --fg:#f0f2f5; --fg-muted:#8a94a6;
+      --accent:#00d4aa; --accent-dim:rgba(0,212,170,.15); --border-default:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Space Grotesk',sans-serif;background:var(--bg-base);color:var(--fg);min-height:100vh;padding:48px 24px}
+    .container{max-width:720px;margin:0 auto}
+    h1{font-size:36px;font-weight:600;margin-bottom:8px;letter-spacing:-0.02em}
+    p.lead{color:var(--fg-muted);margin-bottom:32px;font-size:17px}
+    .form-card{background:var(--bg-card);border:1px solid var(--border-default);border-radius:16px;padding:32px}
+    .field{margin-bottom:20px}
+    label{display:block;font-size:13px;font-weight:500;margin-bottom:6px;color:var(--fg)}
+    input,textarea,select{width:100%;background:#0d1320;border:1px solid var(--border-default);border-radius:8px;padding:12px 14px;color:var(--fg);font-family:inherit;font-size:15px;transition:border-color 150ms}
+    input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+    textarea{min-height:120px;resize:vertical}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#060910;border:0;border-radius:8px;padding:14px 24px;font-weight:600;font-family:inherit;font-size:15px;cursor:pointer;transition:transform 120ms}
+    .btn:hover{transform:translateY(-1px)}
+    .btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+    .demo-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 10px;border-radius:999px;background:var(--accent-dim);color:var(--accent);margin-left:8px}
+    .notice{margin-top:20px;padding:14px;border-radius:8px;font-size:14px;display:none}
+    .notice.ok{display:block;background:rgba(16,185,129,.15);color:#10b981;border:1px solid rgba(16,185,129,.3)}
+    .notice.err{display:block;background:rgba(239,68,68,.15);color:#ef4444;border:1px solid rgba(239,68,68,.3)}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:600px){.row{grid-template-columns:1fr}}
+    a.back{color:var(--fg-muted);text-decoration:none;font-size:13px;display:inline-block;margin-bottom:24px}
+    a.back:hover{color:var(--accent)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back">← Back to home</a>
+    <h1>Apply: BCA Management Skills <span class="demo-tag" id="modeTag">DEMO</span></h1>
+    <p class="lead">Tell us about yourself. Applications are reviewed within 14 business days.</p>
+    <form id="applyForm" class="form-card" novalidate>
+      <div class="row">
+        <div class="field">
+          <label for="full_name">Full name *</label>
+          <input type="text" id="full_name" name="full_name" required minlength="2" maxlength="120">
+        </div>
+        <div class="field">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="field">
+          <label for="current_year">Current year</label>
+          <select id="current_year" name="current_year">
+            <option value="">Select…</option>
+            <option>1st year BCA</option>
+            <option>2nd year BCA</option>
+            <option>3rd year BCA</option>
+            <option>Graduated</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="intended_start">Intended start</label>
+        <input type="text" id="intended_start" name="intended_start" placeholder="e.g. Q1 2026">
+      </div>
+      <div class="field">
+        <label for="message">Why do you want to join? (optional)</label>
+        <textarea id="message" name="message" maxlength="2000"></textarea>
+      </div>
+      <button type="submit" class="btn" id="submit">Submit application →</button>
+      <div class="notice" id="notice"></div>
+    </form>
+  </div>
+  <script type="module">
+    import { submitAdmissionInquiry, supabaseConfig } from './supabase/supabase-client.js';
+    const modeTag = document.getElementById('modeTag');
+    if (supabaseConfig.MODE === 'live') { modeTag.textContent = 'LIVE'; modeTag.style.color = '#10b981'; modeTag.style.background = 'rgba(16,185,129,.15)'; }
+    const form = document.getElementById('applyForm');
+    const notice = document.getElementById('notice');
+    const submit = document.getElementById('submit');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      notice.className = 'notice'; notice.textContent = '';
+      submit.disabled = true;
+      try {
+        const data = Object.fromEntries(new FormData(form));
+        await submitAdmissionInquiry(data);
+        notice.className = 'notice ok';
+        notice.textContent = supabaseConfig.MODE === 'live'
+          ? 'Thanks — your application was submitted successfully. Check your email for next steps.'
+          : 'Thanks — your application was saved (demo mode). Once Supabase is configured, this will send a live submission.';
+        form.reset();
+      } catch (err) {
+        notice.className = 'notice err';
+        notice.textContent = err.message || 'Something went wrong. Please try again.';
+      } finally {
+        submit.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
